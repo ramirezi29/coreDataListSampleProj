@@ -51,6 +51,7 @@ class TaskTVCell: UITableViewCell {
     
     @IBAction func isCompleteButtonTapped(_ sender: Any) {
         // Step: Delegate 3
+        // NOTE: - Method gets called when we tapp the button 
         buttonDelegate?.buttonCellButtonTapped(self)
     }
 }

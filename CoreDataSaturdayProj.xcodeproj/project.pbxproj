@@ -18,6 +18,7 @@
 		47B960CF223D7175008525FD /* TaskTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B960CE223D7175008525FD /* TaskTVCell.swift */; };
 		47B960D1223D7733008525FD /* TaskTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B960D0223D7733008525FD /* TaskTVC.swift */; };
 		47B960D3223D7745008525FD /* DetailTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B960D2223D7745008525FD /* DetailTVC.swift */; };
+		47B960D5223D7982008525FD /* GradiantExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B960D4223D7982008525FD /* GradiantExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		47B960CE223D7175008525FD /* TaskTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTVCell.swift; sourceTree = "<group>"; };
 		47B960D0223D7733008525FD /* TaskTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTVC.swift; sourceTree = "<group>"; };
 		47B960D2223D7745008525FD /* DetailTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTVC.swift; sourceTree = "<group>"; };
+		47B960D4223D7982008525FD /* GradiantExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradiantExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 				47B960BD223D5C41008525FD /* Info.plist */,
 				47B960B8223D5C41008525FD /* Assets.xcassets */,
 				47B960AE223D5C3F008525FD /* AppDelegate.swift */,
+				47B960D4223D7982008525FD /* GradiantExtension.swift */,
 			);
 			path = Resouces;
 			sourceTree = "<group>";
@@ -199,6 +202,7 @@
 				47B960B7223D5C3F008525FD /* CoreDataSaturdayProj.xcdatamodeld in Sources */,
 				47B960CF223D7175008525FD /* TaskTVCell.swift in Sources */,
 				47B960CB223D671C008525FD /* Task+Conv.swift in Sources */,
+				47B960D5223D7982008525FD /* GradiantExtension.swift in Sources */,
 				47B960CD223D6C55008525FD /* TaskController.swift in Sources */,
 				47B960AF223D5C3F008525FD /* AppDelegate.swift in Sources */,
 			);

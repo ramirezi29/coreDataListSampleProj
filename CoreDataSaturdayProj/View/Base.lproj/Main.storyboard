@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
+        <!--My Tasks-->
         <scene sceneID="mcx-hW-4gc">
             <objects>
                 <tableViewController id="0m3-uO-OjL" customClass="TaskTVC" customModule="CoreDataSaturdayProj" customModuleProvider="target" sceneMemberID="viewController">
@@ -63,7 +63,8 @@
                             <outlet property="delegate" destination="0m3-uO-OjL" id="A2e-ct-Uw5"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="gfL-9U-ejm">
+                    <navigationItem key="navigationItem" title="My Tasks" id="gfL-9U-ejm">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="nCk-3T-0ic"/>
                         <barButtonItem key="rightBarButtonItem" title="Item" id="MuU-xQ-812">
                             <connections>
                                 <segue destination="U4b-wq-tno" kind="show" id="SX5-YQ-PjC"/>
@@ -75,7 +76,7 @@
             </objects>
             <point key="canvasLocation" x="1002.4" y="132.68365817091455"/>
         </scene>
-        <!--Title-->
+        <!--Task-->
         <scene sceneID="47C-Lv-FhB">
             <objects>
                 <tableViewController id="U4b-wq-tno" customClass="DetailTVC" customModule="CoreDataSaturdayProj" customModuleProvider="target" sceneMemberID="viewController">
@@ -163,7 +164,7 @@
                             <outlet property="delegate" destination="U4b-wq-tno" id="wTu-zS-JaM"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Title" id="699-bY-MXH">
+                    <navigationItem key="navigationItem" title="Task" id="699-bY-MXH">
                         <barButtonItem key="rightBarButtonItem" title="Item" id="xd5-0b-87O"/>
                     </navigationItem>
                 </tableViewController>
