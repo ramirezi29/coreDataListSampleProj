@@ -12,34 +12,48 @@
         <!--Root View Controller-->
         <scene sceneID="mcx-hW-4gc">
             <objects>
-                <tableViewController id="0m3-uO-OjL" sceneMemberID="viewController">
+                <tableViewController id="0m3-uO-OjL" customClass="TaskTVC" customModule="CoreDataSaturdayProj" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="kU9-tR-8xU">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="143" id="Qnz-C5-K9m">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="143" id="Qnz-C5-K9m" customClass="TaskTVCell" customModule="CoreDataSaturdayProj" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="143"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Qnz-C5-K9m" id="oIM-Ip-KRX">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="142.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f5l-ZD-bdJ">
-                                            <rect key="frame" x="204" y="18" width="148" height="106"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" title="Button" image="inCompleted"/>
-                                        </button>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BnW-n8-ERG">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BnW-n8-ERG">
                                             <rect key="frame" x="30" y="47" width="94" height="48"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f5l-ZD-bdJ">
+                                            <rect key="frame" x="274" y="47" width="68" height="63"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="68" id="u1E-p1-H17"/>
+                                            </constraints>
+                                            <state key="normal" title="Button" image="inCompleted"/>
+                                            <connections>
+                                                <action selector="isCompleteButtonTapped:" destination="Qnz-C5-K9m" eventType="touchUpInside" id="Htn-cP-43H"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="BnW-n8-ERG" firstAttribute="top" secondItem="oIM-Ip-KRX" secondAttribute="topMargin" constant="36" id="FNr-Tr-45I"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="f5l-ZD-bdJ" secondAttribute="bottom" constant="22" id="GQL-oH-0VJ"/>
+                                        <constraint firstItem="BnW-n8-ERG" firstAttribute="centerY" secondItem="oIM-Ip-KRX" secondAttribute="centerY" id="USB-Wi-xtS"/>
+                                        <constraint firstItem="BnW-n8-ERG" firstAttribute="top" secondItem="f5l-ZD-bdJ" secondAttribute="top" id="XUs-uw-6LM"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="f5l-ZD-bdJ" secondAttribute="trailing" constant="17" id="bwX-AV-nch"/>
+                                        <constraint firstItem="BnW-n8-ERG" firstAttribute="leading" secondItem="oIM-Ip-KRX" secondAttribute="leadingMargin" constant="14" id="moa-cH-Wqy"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="isCompleteButton" destination="f5l-ZD-bdJ" id="pbB-0V-Ugc"/>
+                                    <outlet property="taskNameLabel" destination="BnW-n8-ERG" id="BJV-CR-2mK"/>
                                     <segue destination="U4b-wq-tno" kind="show" identifier="segueToDetail" id="0hM-q4-13j"/>
                                 </connections>
                             </tableViewCell>
@@ -64,7 +78,7 @@
         <!--Title-->
         <scene sceneID="47C-Lv-FhB">
             <objects>
-                <tableViewController id="U4b-wq-tno" sceneMemberID="viewController">
+                <tableViewController id="U4b-wq-tno" customClass="DetailTVC" customModule="CoreDataSaturdayProj" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="JQJ-Xt-fgy">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
